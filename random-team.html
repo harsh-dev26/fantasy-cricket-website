@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Team - Fantasy Cricket Team Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Fantasy Cricket Team Builder</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="select-players.html">Select Players</a></li>
+                    <li><a href="compare-players.html">Compare Players</a></li>
+                    <li><a href="random-team.html" class="active">Random Team</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Random Team Generator</h2>
+        
+        <div class="random-team-builder">
+            <div class="team-preferences">
+                <h3>Preferences</h3>
+                <div class="preference-options">
+                    <div class="preference">
+                        <label for="team-balance">Team Balance:</label>
+                        <select id="team-balance">
+                            <option value="balanced">Balanced</option>
+                            <option value="batting-heavy">Batting Heavy</option>
+                            <option value="bowling-heavy">Bowling Heavy</option>
+                        </select>
+                    </div>
+                    <div class="preference">
+                        <label for="include-team">Include Team:</label>
+                        <select id="include-team">
+                            <option value="all">All Teams</option>
+                            <option value="KKR">KKR</option>
+                            <option value="RCB">RCB</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="generate-team" class="btn btn-primary">Generate Random Team</button>
+            </div>
+
+            <div id="random-team-result" class="random-team-result">
+                <h3>Your Random Team</h3>
+                <div id="random-players-list" class="random-players-list">
+                    <p class="no-team">Click "Generate Random Team" to create a team</p>
+                </div>
+                <div class="team-stats">
+                    <h4>Team Stats</h4>
+                    <div>Total Fantasy Points: <span id="random-total-points">0</span></div>
+                    <div>Batting Strength: <span id="random-batting-strength">0</span></div>
+                    <div>Bowling Strength: <span id="random-bowling-strength">0</span></div>
+                </div>
+                <div class="team-actions">
+                    <button id="save-random-team" class="btn btn-secondary">Save This Team</button>
+                    <button id="edit-random-team" class="btn btn-secondary">Edit in Team Builder</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Fantasy Cricket Team Builder</p>
+        </div>
+    </footer>
+
+    <script src="js/players.js"></script>
+    <script src="js/random.js"></script>
+</body>
+</html>
